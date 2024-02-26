@@ -122,9 +122,9 @@ class LCF_ATEPC(BertForTokenClassification):
             else:
                 mask_begin = 0
             for i in range(mask_begin):
-                masked_text_raw_indices[text_i][i] = np.zeros((768), dtype=np.float)
+                masked_text_raw_indices[text_i][i] = np.zeros((768), dtype=float)
             for j in range(asp_begin + asp_len + SRD - 1, self.args.max_seq_length):
-                masked_text_raw_indices[text_i][j] = np.zeros((768), dtype=np.float)
+                masked_text_raw_indices[text_i][j] = np.zeros((768), dtype=float)
         masked_text_raw_indices = torch.from_numpy(masked_text_raw_indices)
         return masked_text_raw_indices.to(self.args.device)
 
