@@ -14,7 +14,8 @@ from time import strftime, localtime
 import numpy as np
 import torch
 import torch.nn.functional as F
-from transformers.optimization import AdamW
+# from transformers.optimization import AdamW
+from torch.optim import AdamW
 from transformers.models.bert.modeling_bert import BertModel
 from transformers import BertTokenizer
 # from pytorch_transformers.optimization import AdamW
