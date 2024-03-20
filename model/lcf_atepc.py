@@ -44,7 +44,7 @@ class LCF_ATEPC(BertForTokenClassification):
         if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
             self.dense = torch.nn.Linear(768, 2)
         else:
-            self.dense = torch.nn.Linear(768, 3)
+            self.dense = torch.nn.Linear(768, 6)
         self.bert_global_focus = self.bert_for_global_context
         self.dropout = nn.Dropout(self.args.dropout)
         self.SA1 = SelfAttention(config, args)
