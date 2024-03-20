@@ -11,4 +11,4 @@
     "max_seq_length": 80,
     "local_context_focus": "fusion"
   }
-}
+
